@@ -24,3 +24,11 @@ ecom_sales['date'] = pd.to_datetime(ecom_sales[['year', 'month', 'day']])
 # Add a new column category
 categories = ['Household', 'Kitchen', 'Clothes', 'Garden']
 ecom_sales['category'] = np.random.choice(categories, size=len(ecom_sales))
+
+# add major and minor categories
+majors = ['Household', 'Kitchen', 'Clothes', 'Garden']
+minors = ['Tops', 'Shoes', 'Cutlery', 'Turf', 'Hoses', 'Hats', 'Curtains',
+          'Lamps', 'Cooking Knives', 'Rugs', 'Chairs', 'Coasters', 'Scales',
+          'Plates', 'Seeds', 'Rakes', 'Bowls']
+ecom_sales['Major Category'] = np.random.choice(majors, size=len(ecom_sales))
+ecom_sales['Minor Category'] = np.random.choice(minors, size=len(ecom_sales))
